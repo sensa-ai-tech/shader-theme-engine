@@ -1,0 +1,57 @@
+{
+  "name": "minimal-pulse",
+  "version": "1.0.0",
+  "description": "Ultra-minimal monochrome theme with a single subtle glow orb and no other shader effects",
+  "colors": {
+    "primary": "#1a1a2e",
+    "secondary": "#16213e",
+    "accent": "#e94560",
+    "background": "#0f0f1a",
+    "foreground": "#e0e0e0"
+  },
+  "performance": {
+    "maxShaderInstances": 2,
+    "mobileStrategy": "css-only"
+  },
+  "sections": {
+    "hero": {
+      "shader": "glow-orb",
+      "priority": "high",
+      "params": {
+        "glowColor": [0.914, 0.271, 0.376],
+        "intensity": 0.25,
+        "radius": 500,
+        "speed": 0.15,
+        "trackMouse": true
+      },
+      "fallback": {
+        "type": "css",
+        "value": "radial-gradient(circle at 50% 40%, rgba(233,69,96,0.12), transparent 60%)"
+      }
+    },
+    "features": {
+      "shader": "none",
+      "priority": "low",
+      "params": {},
+      "fallback": {
+        "type": "none"
+      }
+    },
+    "cta": {
+      "shader": "none",
+      "priority": "low",
+      "params": {},
+      "fallback": {
+        "type": "none"
+      }
+    },
+    "footer": {
+      "shader": "none",
+      "priority": "low",
+      "params": {},
+      "fallback": {
+        "type": "none"
+      }
+    }
+  }
+}

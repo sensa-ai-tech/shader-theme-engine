@@ -1,0 +1,52 @@
+{
+  "name": "shader-theme",
+  "version": "0.0.1",
+  "description": "One-click WebGL shader themes for Next.js — CLI tool",
+  "license": "MIT",
+  "author": "ShaderTheme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shader-theme/shader-theme",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "cli",
+    "webgl",
+    "shader",
+    "nextjs",
+    "theme",
+    "generator",
+    "scaffold"
+  ],
+  "type": "module",
+  "bin": {
+    "shader-theme": "./dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc",
+    "cli": "tsx src/bin.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@shader-theme/core": "workspace:*",
+    "prompts": "^2.4.2",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.18"
+  }
+}

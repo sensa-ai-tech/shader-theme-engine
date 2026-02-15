@@ -1,0 +1,80 @@
+{
+  "name": "@shader-theme/core",
+  "version": "0.0.1",
+  "description": "Zero-dependency WebGL shader engine for Next.js themes",
+  "license": "MIT",
+  "author": "ShaderTheme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shader-theme/shader-theme",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "webgl",
+    "shader",
+    "glsl",
+    "react",
+    "nextjs",
+    "theme",
+    "gradient",
+    "animation",
+    "gpu"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/components/*.js",
+      "default": "./dist/components/*.js"
+    },
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./dist/lib/*.js",
+      "default": "./dist/lib/*.js"
+    },
+    "./themes": {
+      "types": "./dist/themes/index.d.ts",
+      "import": "./dist/themes/index.js",
+      "default": "./dist/themes/index.js"
+    },
+    "./themes/*": "./src/themes/*.json"
+  },
+  "files": [
+    "dist",
+    "src/shaders",
+    "src/themes/*.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "vitest run --config vitest.browser.config.ts"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@vitest/browser": "^4.0.18",
+    "jsdom": "^28.0.0",
+    "playwright": "^1.58.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.18",
+    "zod": "^3.24.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "soft-glow",
+  "version": "1.0.0",
+  "description": "Light warm brand theme with desaturated mesh gradients and subtle noise overlays",
+  "colors": {
+    "primary": "#e8a87c",
+    "secondary": "#d4a5a5",
+    "accent": "#95e1d3",
+    "background": "#fef9f4",
+    "foreground": "#2d2d2d"
+  },
+  "performance": {
+    "maxShaderInstances": 3,
+    "mobileStrategy": "simplify"
+  },
+  "sections": {
+    "hero": {
+      "shader": "mesh-gradient",
+      "priority": "high",
+      "params": {
+        "color1": [0.91, 0.659, 0.486],
+        "color2": [0.831, 0.647, 0.647],
+        "color3": [0.584, 0.882, 0.827],
+        "speed": 0.5,
+        "distortion": 0.6,
+        "seed": 17
+      },
+      "fallback": {
+        "type": "css",
+        "value": "linear-gradient(135deg, #e8a87c 0%, #d4a5a5 50%, #95e1d3 100%)"
+      }
+    },
+    "features": {
+      "shader": "noise-grain",
+      "priority": "medium",
+      "params": {
+        "color": [0.176, 0.176, 0.176],
+        "density": 0.03,
+        "speed": 0,
+        "opacity": 0.06
+      },
+      "fallback": {
+        "type": "none"
+      }
+    },
+    "cta": {
+      "shader": "none",
+      "priority": "low",
+      "params": {},
+      "fallback": {
+        "type": "none"
+      }
+    },
+    "footer": {
+      "shader": "none",
+      "priority": "low",
+      "params": {},
+      "fallback": {
+        "type": "none"
+      }
+    }
+  }
+}

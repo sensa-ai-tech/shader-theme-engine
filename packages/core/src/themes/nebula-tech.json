@@ -1,0 +1,77 @@
+{
+  "name": "nebula-tech",
+  "version": "1.0.0",
+  "description": "Dark sci-fi theme with flowing purple-blue fluid gradients and hover glow effects",
+  "colors": {
+    "primary": "#5100ff",
+    "secondary": "#00ff80",
+    "accent": "#ffcc00",
+    "background": "#050510",
+    "foreground": "#ffffff"
+  },
+  "performance": {
+    "maxShaderInstances": 4,
+    "mobileStrategy": "simplify"
+  },
+  "sections": {
+    "hero": {
+      "shader": "mesh-gradient",
+      "priority": "high",
+      "params": {
+        "color1": [0.318, 0.0, 1.0],
+        "color2": [0.0, 0.4, 0.9],
+        "color3": [0.1, 0.0, 0.5],
+        "speed": 0.8,
+        "distortion": 1.4,
+        "seed": 42
+      },
+      "fallback": {
+        "type": "css",
+        "value": "linear-gradient(135deg, #5100ff 0%, #0066e6 50%, #1a0080 100%)"
+      }
+    },
+    "features": {
+      "shader": "glow-orb",
+      "priority": "medium",
+      "params": {
+        "glowColor": [0.318, 0.0, 1.0],
+        "intensity": 0.4,
+        "radius": 400,
+        "speed": 0.3,
+        "trackMouse": true
+      },
+      "fallback": {
+        "type": "css",
+        "value": "radial-gradient(circle at 50% 50%, rgba(81,0,255,0.15), transparent 70%)"
+      }
+    },
+    "cta": {
+      "shader": "glow-orb",
+      "priority": "low",
+      "params": {
+        "glowColor": [0.0, 1.0, 0.502],
+        "intensity": 0.3,
+        "radius": 300,
+        "speed": 0.2,
+        "trackMouse": false
+      },
+      "fallback": {
+        "type": "css",
+        "value": "radial-gradient(circle at 50% 50%, rgba(0,255,128,0.1), transparent 60%)"
+      }
+    },
+    "footer": {
+      "shader": "noise-grain",
+      "priority": "low",
+      "params": {
+        "color": [1.0, 1.0, 1.0],
+        "density": 0.04,
+        "speed": 0,
+        "opacity": 0.12
+      },
+      "fallback": {
+        "type": "none"
+      }
+    }
+  }
+}

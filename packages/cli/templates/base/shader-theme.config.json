@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shader-theme.dev/schema.json",
+  "name": "{{THEME_NAME}}",
+  "version": "1.0.0",
+  "description": "{{THEME_DESCRIPTION}}",
+  "colors": {
+    "primary": "{{PRIMARY_HEX}}",
+    "secondary": "{{SECONDARY_HEX}}",
+    "accent": "{{ACCENT_HEX}}",
+    "background": "{{BACKGROUND_HEX}}",
+    "foreground": "{{FOREGROUND_HEX}}"
+  },
+  "performance": {
+    "maxShaderInstances": {{MAX_SHADER_INSTANCES}},
+    "mobileStrategy": "{{MOBILE_STRATEGY}}"
+  }
+}
