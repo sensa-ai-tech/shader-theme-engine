@@ -29,7 +29,6 @@ interface SectionEditorProps {
 export function SectionEditor({ section }: SectionEditorProps) {
   const { state, dispatch } = useEditorContext();
   const config = state.theme.sections[section];
-  if (!config) return null;
 
   const setShader = useCallback(
     (value: string) =>
@@ -50,6 +49,8 @@ export function SectionEditor({ section }: SectionEditorProps) {
     () => dispatch({ type: 'REMOVE_SECTION', payload: { name: section } }),
     [dispatch, section],
   );
+
+  if (!config) return null;
 
   return (
     <div className="space-y-3">

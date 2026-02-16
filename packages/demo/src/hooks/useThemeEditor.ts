@@ -146,12 +146,13 @@ function editorReducer(state: EditorState, action: EditorAction): EditorState {
 
     case 'REMOVE_SECTION': {
       const { name } = action.payload;
-      const { [name]: _removed, ...rest } = state.theme.sections;
+      const remaining = { ...state.theme.sections };
+      delete remaining[name];
       return {
         ...state,
         isDirty: true,
         selectedSection: state.selectedSection === name ? null : state.selectedSection,
-        theme: { ...state.theme, sections: rest },
+        theme: { ...state.theme, sections: remaining },
       };
     }
 
